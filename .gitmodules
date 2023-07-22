@@ -1,0 +1,6 @@
+[submodule "catalog-service"]
+	path = catalog-service
+	url = ./catalog-service
+[submodule "config-service"]
+	path = config-service
+	url = ./config-service
