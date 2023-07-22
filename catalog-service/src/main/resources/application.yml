@@ -1,0 +1,13 @@
+server:
+  port: 80
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 15s
+    threads:
+      max: 50
+      min-spare: 5
+
+
+
+polar:
+  greeting: Welcome to the local book catalog
