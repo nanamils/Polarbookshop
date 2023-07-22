@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1608c687-cf43-4d4c-aa7d-c44e53563ae0" name="Changes" comment="add two submodule" />
+    <list default="true" id="1608c687-cf43-4d4c-aa7d-c44e53563ae0" name="Changes" comment="add two submodule">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalog-service/.github/workflows/commit-stage.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/commit-stage.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +48,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
@@ -53,6 +60,10 @@
       <recent name="D:\Users\Nanami\Polarbookshop\catalog-service\src\test\java\com\polarbookshop\catalogservice" />
       <recent name="D:\Users\Nanami\Polarbookshop\catalog-service\src\main\java\com\polarbookshop\catalogservice" />
       <recent name="D:\Users\Nanami\Polarbookshop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Nanami\Polarbookshop" />
+      <recent name="D:\Users\Nanami\Polarbookshop\catalog-service" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.polarbookshop.catalogservice" />
@@ -157,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690001393872</updated>
-      <workItem from="1690001395258" duration="3201000" />
+      <workItem from="1690001395258" duration="5979000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -175,11 +186,46 @@
       <option name="project" value="LOCAL" />
       <updated>1690003607603</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add two submodule">
+      <option name="closed" value="true" />
+      <created>1690004641321</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690004641321</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add two submodule">
+      <option name="closed" value="true" />
+      <created>1690008424918</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690008424918</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add two submodule">
+      <option name="closed" value="true" />
+      <created>1690008540479</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690008540479</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
