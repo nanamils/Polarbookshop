@@ -1,6 +1,5 @@
-package com.polarbookshop.catalogservice;
+package com.polarbookshop.catalogservice.domain;
 
-import com.polarbookshop.catalogservice.domain.Book;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;

@@ -7,12 +7,6 @@ server:
       max: 50
       min-spare: 5
 
-
-
-polar:
-  greeting: Welcome to the local book catalog
-
-
 spring:
   application:
     name: catalog-service
@@ -23,12 +17,12 @@ spring:
         uri: http://localhost:8888
         request-connect-timeout: 5000
         request-read-timeout: 5000
-        fail-fast: true
+        fail-fast: false # In production, set to true
         retry:
           max-attempts: 6
+          initial-interval: 1000
           max-interval: 2000
           multiplier: 1.1
-          initial-interval: 1000
 
 
 management:
@@ -36,3 +30,6 @@ management:
     web:
       exposure:
         include: refresh
+
+polar:
+  greeting: Welcome to the local book catalog
