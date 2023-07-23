@@ -22,7 +22,7 @@ class CatalogServiceApplicationTests {
     @Test
     void whenGetRequestWithIdThenBookReturned() {
         var bookIsbn = "1234567890";
-        var bookToCreate = new Book(bookIsbn, "Titlle", "Author", 9.90);
+        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90);
         Book expectedBook = webTestClient
                 .post()
                 .uri("/books")
@@ -46,7 +46,7 @@ class CatalogServiceApplicationTests {
 
     @Test
     void whenPostRequestThenBookCreated() {
-        var expectedBook = new Book(
+        var expectedBook = Book.of(
                 "9781234567897",
                 "Building Microservices",
                 "Sam Newman",
@@ -68,8 +68,8 @@ class CatalogServiceApplicationTests {
     @Test
     void whenPutRequestThenBookUpdated() {
         var bookIsbn = "1234567891";
-        var bookToCreate = new Book(bookIsbn, "Title", "Author", 9.90);
-        Book expectedBook = webTestClient
+        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90);
+        Book createdBook = webTestClient
                 .post()
                 .uri("/books")
                 .bodyValue(bookToCreate)
@@ -77,7 +77,9 @@ class CatalogServiceApplicationTests {
                 .expectStatus().isCreated()
                 .expectBody(Book.class).value(book -> assertThat(book).isNotNull())
                 .returnResult().getResponseBody();
-        var bookToUpdate = new Book(bookIsbn, "New Title", "New Author", 7.95);
+        assert createdBook != null;
+        var bookToUpdate = new Book(createdBook.id(), createdBook.isbn(), createdBook.title(), createdBook.author(), 7.95,
+                createdBook.createdDate(), createdBook.lastModifiedDate(), createdBook.version());
 
         webTestClient
                 .put()
@@ -87,7 +89,6 @@ class CatalogServiceApplicationTests {
                 .expectStatus().isOk()
                 .expectBody(Book.class).value(actualBook -> {
                     assertThat(actualBook).isNotNull();
-                    assert expectedBook != null;
                     assertThat(actualBook.price()).isEqualTo(bookToUpdate.price());
                 });
     }
@@ -95,7 +96,7 @@ class CatalogServiceApplicationTests {
     @Test
     void whenDeleteRequestThenBookDeleted() {
         var bookIsbn = "1234567892";
-        var bookToCreate = new Book(bookIsbn, "Title", "Author", 9.90);
+        var bookToCreate = Book.of(bookIsbn, "Title", "Author", 9.90);
         webTestClient
                 .post()
                 .uri("/books")

@@ -34,4 +34,7 @@ jobs:
           cd catalog-service
           chmod +x mvnw
           ./mvnw clean install -DskipTests=false -DskipITs=false
+          cd ../config-service
+          chmod +x mvnw
+          ./mvnw clean install -DskipTests=false -DskipITs=false
           
