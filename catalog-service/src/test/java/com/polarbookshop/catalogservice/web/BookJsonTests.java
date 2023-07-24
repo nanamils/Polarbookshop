@@ -43,7 +43,7 @@ public class BookJsonTests {
         var instant = Instant.parse("2021-03-01T10:00:00.000000Z");
         var content = """
                 {
-                    “id”: 394,
+                    "id": 394,
                     "isbn": "1234567890",
                     "title": "Title",
                     "author": "Author",

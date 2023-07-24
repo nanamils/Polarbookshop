@@ -7,7 +7,6 @@
     <list default="true" id="1608c687-cf43-4d4c-aa7d-c44e53563ae0" name="Changes" comment="add postgresql persistence support">
       <change afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/domain/BookRepositoryJdbcTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/catalog-service/src/test/resources/application-integration.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/CatalogServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/CatalogServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/web/BookJsonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/web/BookJsonTests.java" afterDir="false" />
@@ -200,7 +199,7 @@
       <workItem from="1690001395258" duration="8353000" />
       <workItem from="1690011507654" duration="2301000" />
       <workItem from="1690113287312" duration="40000" />
-      <workItem from="1690113344039" duration="15728000" />
+      <workItem from="1690113344039" duration="16297000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -274,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690131485307</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add postgresql persistence support">
+      <option name="closed" value="true" />
+      <created>1690172346788</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690172346788</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
