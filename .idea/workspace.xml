@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1608c687-cf43-4d4c-aa7d-c44e53563ae0" name="Changes" comment="fixed configuration not found bug">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/config/DataConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog-service/src/main/resources/schema.sql" afterDir="false" />
+    <list default="true" id="1608c687-cf43-4d4c-aa7d-c44e53563ae0" name="Changes" comment="add postgresql persistence support">
+      <change afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/domain/BookRepositoryJdbcTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/catalog-service/src/test/resources/application-integration.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/demo/BookDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/demo/BookDataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/domain/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/domain/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/domain/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/domain/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/domain/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/java/com/polarbookshop/catalogservice/persistence/InMemoryBookRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/CatalogServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/CatalogServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/domain/BookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/domain/BookServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/domain/BookValidationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/domain/BookValidationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/web/BookJsonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/catalog-service/src/test/java/com/polarbookshop/catalogservice/web/BookJsonTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,29 +104,29 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.generated-requests | #5">
+  <component name="RunManager" selected="JUnit.CatalogServiceApplicationTests">
     <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="BookServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookJsonTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="catalog-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.polarbookshop.catalogservice.domain.*" />
+          <option name="PATTERN" value="com.polarbookshop.catalogservice.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.polarbookshop.catalogservice.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.polarbookshop.catalogservice.domain.BookServiceTest" />
+      <option name="PACKAGE_NAME" value="com.polarbookshop.catalogservice.web" />
+      <option name="MAIN_CLASS_NAME" value="com.polarbookshop.catalogservice.web.BookJsonTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookValidationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookRepositoryJdbcTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="catalog-service" />
       <extension name="coverage">
         <pattern>
@@ -145,24 +135,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.polarbookshop.catalogservice.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.polarbookshop.catalogservice.domain.BookValidationTests" />
+      <option name="MAIN_CLASS_NAME" value="com.polarbookshop.catalogservice.domain.BookRepositoryJdbcTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookValidationTests.whenIsbnDefinedButIncorrectThenValidationFails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CatalogServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="catalog-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.polarbookshop.catalogservice.domain.*" />
+          <option name="PATTERN" value="com.polarbookshop.catalogservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.polarbookshop.catalogservice.domain" />
-      <option name="MAIN_CLASS_NAME" value="com.polarbookshop.catalogservice.domain.BookValidationTests" />
-      <option name="METHOD_NAME" value="whenIsbnDefinedButIncorrectThenValidationFails" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.polarbookshop.catalogservice" />
+      <option name="MAIN_CLASS_NAME" value="com.polarbookshop.catalogservice.CatalogServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,19 +173,19 @@
     <list>
       <item itemvalue="HTTP Request.generated-requests | #5" />
       <item itemvalue="HTTP Request.generated-requests | #7" />
-      <item itemvalue="JUnit.BookValidationTests.whenIsbnDefinedButIncorrectThenValidationFails" />
-      <item itemvalue="JUnit.BookServiceTest" />
-      <item itemvalue="JUnit.BookValidationTests" />
+      <item itemvalue="JUnit.BookJsonTests" />
+      <item itemvalue="JUnit.BookRepositoryJdbcTests" />
+      <item itemvalue="JUnit.CatalogServiceApplicationTests" />
       <item itemvalue="Spring Boot.CatalogServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CatalogServiceApplicationTests" />
+        <item itemvalue="JUnit.BookRepositoryJdbcTests" />
+        <item itemvalue="JUnit.BookJsonTests" />
         <item itemvalue="HTTP Request.generated-requests | #5" />
         <item itemvalue="HTTP Request.generated-requests | #7" />
-        <item itemvalue="JUnit.BookServiceTest" />
-        <item itemvalue="JUnit.BookValidationTests" />
-        <item itemvalue="JUnit.BookValidationTests.whenIsbnDefinedButIncorrectThenValidationFails" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +200,7 @@
       <workItem from="1690001395258" duration="8353000" />
       <workItem from="1690011507654" duration="2301000" />
       <workItem from="1690113287312" duration="40000" />
-      <workItem from="1690113344039" duration="10956000" />
+      <workItem from="1690113344039" duration="15728000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -277,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690114275691</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add postgresql persistence support">
+      <option name="closed" value="true" />
+      <created>1690131485307</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690131485307</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +314,17 @@
     <MESSAGE value="fix some glitches" />
     <MESSAGE value="changed catalog-service.yml" />
     <MESSAGE value="fixed configuration not found bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed configuration not found bug" />
+    <MESSAGE value="add postgresql persistence support" />
+    <option name="LAST_COMMIT_MESSAGE" value="add postgresql persistence support" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
